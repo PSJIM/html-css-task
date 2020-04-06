@@ -8,6 +8,30 @@
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:300,400,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <title>Lorem Ipsum Portfolio</title>
+    <style>
+        /* display width warning */
+        @media (max-width: 1000px) {
+            header,
+            .pageContainer,
+            footer{
+                display: none;
+            }
+            .displayWarning{
+                display: block;
+            }
+        } 
+        /* I hated the proportions of the site on hi-res screens */
+        @media (min-width: 1650px) {
+            aside{
+                width: 25%;
+            }
+        }
+        @media (min-width: 2150px) {
+            aside{
+                width: 20%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,21 +50,21 @@
         <div class="linksContainer">
             <img id="worldwide" src="./img/worldwide.svg" width="19px">
             <div class="links">
-                johnsmith.com <br>
-                john@smith.com
+                <a href="johnsmith.com">johnsmith.com</a> <br>
+                <a href="mailto:john@smith.com">john@smith.com</a>
             </div>
         </div>
         <div class="phoneContainer">
             <img id="telephone" src="./img/telephone.svg" width="19px">
             <div class="telephone">
-                +1 1337 13 37
+                <a href="callto:+13371337">+ 1 337 13 37</a>
             </div>
         </div>
     </header>
     <div class="pageContainer">
         <aside>
             <div class="profileInfoContainer">
-                <div class="asideTitle">
+                <div class="aside-mainTitle">
                     <img src="./img/briefcase.jpg" height="30px">
                     <p>Profile Info</p>
                 </div>
@@ -51,7 +75,7 @@
                 </div> 
             </div>
             <div class="interestsContainer">
-                <div class="asideTitle">
+                <div class="aside-mainTitle">
                     <img src="./img/briefcase.jpg" height="30px">
                     <p>Interests</p>
                 </div>
@@ -71,7 +95,7 @@
                 </div> 
             </div>
             <div class="referenceContainer">
-                <div class="asideTitle">
+                <div class="aside-mainTitle">
                     <img src="./img/briefcase.jpg" height="30px">
                     <p>Reference</p>
                 </div>
@@ -91,7 +115,7 @@
                 </div> 
             </div>
             <div class="referenceContainer">
-                <div class="asideTitle">
+                <div class="aside-mainTitle">
 
                     <img src="./img/briefcase.jpg" height="30px">
                     <p>Awards</p>
@@ -106,7 +130,7 @@
         <main>
             <!-- Photos licence - https://www.pexels.com/pl-pl/photo-license/ -->
             <div class="portfolioTitleContainer">
-                <div class="asideTitle">
+                <div class="aside-mainTitle">
                     <img src="./img/briefcase.jpg" height="30px">
                     <p>Portfolio</p>
                 </div>
@@ -152,7 +176,10 @@
         </main>
     </div>
     <footer>
-
+        You can write me on <a href="mailto:john@smith.com">john@smith.com</a> or call <a href="callto:+13371337">+ 1 337 13 37</a>
     </footer>
+    <div class="displayWarning">
+        This site doesn't work with screens below 1000 px in width (yet!)
+    </div>
 </body>
 </html>

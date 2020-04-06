@@ -1,12 +1,8 @@
 body{
     margin: 0px;
-    min-width: 1100px;
-    width: auto !important;
 }
 header{
     background-color: #4c5eab;
-    min-width: 1100px;
-    width: auto !important;
     height: 250px;
     padding-left: 75px;
 }
@@ -44,6 +40,22 @@ h3{
     font-size: 16px;
     margin: 20px 0px 0px 0px;
 }
+a:link, 
+a:visited, 
+a:active{
+    font-family: "open-sans", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;  
+}
+header a:link, 
+header a:visited, 
+header a:active{
+    font-weight: 400;
+}
+a:hover{
+    text-decoration: underline;
+}
 .adressContainer{
     top: 60px;
 }
@@ -57,6 +69,7 @@ h3{
 .linksContainer,
 .phoneContainer{
     position: absolute;
+    float: right;
     right: 0px;
     width: 200px;
     font-family: "open-sans", sans-serif;
@@ -71,15 +84,13 @@ h3{
     padding-right: 15px;
 }
 .pageContainer{
-    height: 1000px;
-    min-width: 1100px;
+    height: 1100px;
 }
 aside{
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 75%, rgba(250,250,250,1) 100%);
-    height: 1000px;
+    height: 1100px;
     width: 30%;
-    min-width: 300px;
     float: left;
     color: #333232;
 }
@@ -94,11 +105,11 @@ aside{
     text-align: justify;
     line-height: 25px;
 }
-.asideTitle img{
+.aside-mainTitle img{
     float: left;
     border-radius: 50%;
 }
-.asideTitle p{
+.aside-mainTitle p{
     position: relative;
     left: 20px;
     top: 3px;
@@ -169,7 +180,6 @@ main{
     position: absolute;
     left: 30%;
     width: 70%;
-    min-width: 700px;
     height: 1000px;
     text-align: center;
 }
@@ -201,6 +211,14 @@ main{
     height: 260px;
     background-color: #fff;
 }
+.portfolioItemleft img:hover,
+.portfolioItemright img:hover{
+    transform: scale(2)
+}
+.portfolioItemleft img,
+.portfolioItemright img{
+    transition: 1s ease-in-out;
+}
 .portfolioItemleft{
     float: left;
 }
@@ -210,4 +228,13 @@ main{
 footer{
     height: 70px;
     background-color: #4c5eab;
+    font-family: "open-sans", sans-serif;
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 50px;
+    padding-left: 90px;
+}
+.displayWarning{
+    display:none;
 }
